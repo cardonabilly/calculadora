@@ -29,8 +29,17 @@
        <!--boton que llamara a la funcion sumar-->
        <button onclick="sumar()" >sumar</button><br>
 
+       <!--boton que llamara a la funcion restar-->
+       <button onclick="restar()" >restar</button><br>
+
+       <!--boton que llamara a la funcion multiplicar-->
+       <button onclick="multiplicar()" >multiplicar</button><br>
+
+       <!--boton que llamara a la funcion dividir-->
+       <button onclick="dividir()" >dividir</button><br>
+
        <!--campo donde se mostrara el resultado-->
-       <p><label for="resultado">resultado de la suma</label>
+       <p><label for="resultado">resultado</label>
         <input type="number" id="resultado" name="resultado"><br></p>
         <script>
             function sumar(){
@@ -69,6 +78,33 @@
                 document.getElementById("resultado").value = resultado;
 
             }
+
+            function restar(){
+                
+                //capturar los valores de los input y guardamos en variables 
+                var a =  document.getElementById("a").value; 
+                var b =  document.getElementById("b").value;
+                var c =  document.getElementById("c").value;
+                //definimos las variables de salida
+                var resultado;
+
+               //definocion el valor mayor o menor 
+               var nmayor = Math.max(a,b,c);
+               var nmenor = Math.min(a,b,c);
+
+                //realizamos la resta
+                resultado = nmayor - nmenor ;
+
+                //mostramos el resultado 
+                document.getElementById("resultado").value = resultado;
+          
+                
+
+            }
+
+           
+
+
         </script>
 
        
