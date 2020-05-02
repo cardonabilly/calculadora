@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>solucion de problemas</title>
+    <title>calculadora</title>
 </head>
 <body>
-    <h1>solucion de problemas</h1>
+    <h1>resolucio de tres variables</h1>
         
     <!--esta es la descripcion del problema-->
-    <p>programa que recibe 2 variables, suma las variables y muestra el resultado de la suma</p>
+    <p>programa que recibe 3 variables y las opera en suma, resta, multiplicacion y divicion</p>
 
     <!--analisis basico-->
     <p>los datos de entrada seran numeros enteros </p>
-       <p>se sumaran las variables</p>
+       <p>se solucionaran las variables </p>
 
        <!--input´s para recivir las variables-->
        <p><label for="a">ingrese el primer numero</label>
@@ -100,33 +100,7 @@
                 
                       }
 
-                      function dividir(){
-                
-                //capturar los valores de los input y guardamos en variables 
-                var a =  document.getElementById("a").value; 
-                var b =  document.getElementById("b").value;
-                var c =  document.getElementById("c").value;
-                //definimos las variables de salida
-                var resultado;
-
-              
-
-               //definocion el valor mayor 
-               
-               var nmax =Math.max(a,b,c);
-
-                //realizamos la divicion 
-                resultado = nmax / b  ;
-
-                //mostramos el resultado 
-                document.getElementById("resultado").value = resultado;
-          
-                
-
-            }
-
-
-
+                      
             function multiplicar(){
                 
                 //capturar los valores de los input y guardamos en variables 
@@ -174,15 +148,34 @@
                 //definimos las variables de salida
                 var resultado;
 
+                
+            
               
 
                //definocion el valor mayor 
                
                var nmayor =Math.max(a,b,c);
 
+             //error al dividir
+
+               if ( a ==0 && b ==0 && c ==0) {
+                
+
+            } else if (b == 0){  
+                alert("error no se puede dividir");
+            }else{ 
+ 
+                if ( a ==0 && b ==0 && c ==0) {
+            } else if (a == 0){  
+                alert("error no se puede dividir");
+            }else{ 
+
+            
                 //realizamos la divicion 
                 resultado = nmayor / b  ;
-
+            
+            }
+            }
                 //mostramos el resultado 
                 document.getElementById("resultado").value = resultado;
           
